@@ -1,7 +1,12 @@
 # PnP-ADMM Super-Resolution using DnCNN
 
-> **Course Project | Eval 2**  
-> Plug-and-Play ADMM for Image Super-Resolution with a learned DnCNN denoiser prior.
+**MFC Project Final Review**  
+**Group - D8**
+
+| Name | Roll Number |
+|---|---|
+| S Nikhil | CB.SC.U4AIE24351 |
+| Dhyan B | CB.SC.U4AIE24314 |
 
 ---
 
@@ -9,7 +14,6 @@
 - [Overview](#overview)
 - [Algorithm](#algorithm)
 - [Project Structure](#project-structure)
-- [How to Upload to GitHub](#how-to-upload-to-github)
 - [Setup and Usage](#setup-and-usage)
 - [Results](#results)
 - [Execution Time](#execution-time)
@@ -107,33 +111,6 @@ pnp-admm-super-resolution/
 
 ---
 
-## How to Upload to GitHub
-
-### Step 1 — Create the Repository
-1. Go to [github.com](https://github.com) → click **"+"** → **"New repository"**
-2. Name it `pnp-admm-super-resolution`, set **Public**
-3. Check **"Add a README file"** → click **"Create repository"**
-
-### Step 2 — Upload Files via Browser
-1. In your repo, click **"Add file"** → **"Upload files"**
-2. Drag and drop files (upload in batches by folder — notebooks, results, report)
-3. In the commit box write: `eval_2: Add notebooks, results, report and README`
-4. Click **"Commit changes"**
-
-### Step 3 — Edit the README
-1. Click `README.md` in your repo → click the **pencil icon**
-2. Paste the full README content
-3. Click **"Commit changes"**
-
-### Step 4 — Create the eval_2 Tag
-1. Click **"Releases"** in the right sidebar → **"Create a new release"**
-2. Click **"Choose a tag"** → type `eval_2` → **"+ Create new tag: eval_2"**
-3. Set title: `Eval 2 Submission` → click **"Publish release"**
-
-> This creates the `eval_2` tag your instructor will check.
-
----
-
 ## Setup and Usage
 
 ### Requirements
@@ -159,9 +136,9 @@ Run `notebooks/inference-pnp-admm-cnn.ipynb`
 
 | Method | PSNR (dB) |
 |---|---|
-| Bicubic Upsampling (baseline) | ← fill in from notebook output |
-| PnP-ADMM (ours) | ← fill in from notebook output |
-| Improvement | ← fill in |
+| Bicubic Upsampling (baseline) | — fill in |
+| PnP-ADMM (ours) | — fill in |
+| Improvement | — fill in |
 
 ### Visual Comparison
 
@@ -179,18 +156,16 @@ The primal residual $\|x^k - v^k\|$ decreases monotonically. PSNR improves rapid
 
 ## Execution Time
 
-Timing uses Python's `time` module — equivalent to MATLAB's `tic/toc`:
+Timing is measured using Python's `time` module — equivalent to MATLAB's `tic/toc`:
 
 ```python
 import time
 
-start = time.time()      # tic
+start = time.time()            # tic
 # ... code block ...
-elapsed = time.time() - start   # toc
+elapsed = time.time() - start  # toc
 print(f"Time taken: {elapsed:.2f}s ({elapsed/60:.1f} min)")
 ```
-
-Already included in both notebooks. Copy the printed values into the table below.
 
 ### Platform
 
@@ -200,15 +175,12 @@ Already included in both notebooks. Copy the printed values into the table below
 | **Hardware** | GPU — NVIDIA Tesla P100 (Kaggle free tier) |
 | **Language** | Python 3.10 |
 
-> Update with your actual platform (laptop / Kaggle / Colab) and hardware (CPU / GPU).
-
 ### Measured Times
 
 | Stage | Time Taken |
 |---|---|
-| DnCNN Training (10 epochs, 200 images) | ← from Cell 9 printed output |
-| PnP-ADMM Inference — single image | ← from Cell 13 printed output |
-| Average time per ADMM iteration | ← from per-iteration print |
+| DnCNN Model Training (10 epochs, 200 images) | 1 hr 25 min 14 s |
+| PnP-ADMM Inference (single image, 40 iterations) | 2 min 6 s |
 
 ---
 
@@ -217,8 +189,8 @@ Already included in both notebooks. Copy the printed values into the table below
 1. PnP-ADMM consistently outperforms bicubic interpolation by ~2–3 dB PSNR on 2× SR.
 2. DnCNN trained purely for denoising generalizes effectively as an SR prior inside ADMM.
 3. Convergence is stable — primal residual $\|x - v\|$ decreases monotonically across iterations.
-4. The CG solver handles the data fidelity subproblem without forming the full $n \times n$ matrix, keeping memory usage low.
-5. $\rho = 0.005$ (low penalty) lets data fidelity dominate, reducing over-smoothing from the denoiser.
+4. The CG solver handles the data fidelity subproblem without forming the full $n \times n$ matrix.
+5. $\rho = 0.005$ allows data fidelity to dominate, reducing over-smoothing from the denoiser.
 
 ---
 
