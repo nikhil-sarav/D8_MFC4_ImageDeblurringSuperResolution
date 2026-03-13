@@ -132,14 +132,6 @@ Run `notebooks/inference-pnp-admm-cnn.ipynb`
 
 ## Results
 
-### Quantitative (PSNR in dB)
-
-| Method | PSNR (dB) |
-|---|---|
-| Bicubic Upsampling (baseline) | — fill in |
-| PnP-ADMM (ours) | — fill in |
-| Improvement | — fill in |
-
 ### Visual Comparison
 
 ![Comparison](results/comparison.png)
