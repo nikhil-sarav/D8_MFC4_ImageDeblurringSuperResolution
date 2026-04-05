@@ -134,11 +134,11 @@ Run `notebooks/inference-pnp-admm-cnn.ipynb`
 
 ### Visual Comparison
 
-![Comparison](results/comparison.png)
+![Comparison](review-2/results/comparison.png)
 
 ### Training Loss Curve
 
-![Training Loss](results/training_loss_curve.png)
+![Training Loss](review-2/results/training_loss_curve.png)
 
 ### Convergence of PnP-ADMM
 
