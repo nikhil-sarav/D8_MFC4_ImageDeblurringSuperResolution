@@ -1,4 +1,4 @@
-![Amrita](review-2/results/Amrita-vishwa-vidyapeetham-logo.svg.png)
+![Amrita](results/Amrita-vishwa-vidyapeetham-logo.svg.png)
 # PnP-ADMM Super-Resolution using DnCNN 
 
 **Group - D8**
@@ -135,13 +135,13 @@ This project uses the **DIV2K** dataset (Agustsson and Timofte, 2017) [4], a sta
 
 ### Fig 1: Visual Comparison — Bicubic vs. PnP-ADMM Super-Resolution
 
-![Fig 1: Visual comparison of bicubic interpolation and PnP-ADMM super-resolution on a test image. PnP-ADMM recovers sharper edges and finer details compared to bicubic upsampling.](review-2/results/comparison.png)
+![Fig 1: Visual comparison of bicubic interpolation and PnP-ADMM super-resolution on a test image. PnP-ADMM recovers sharper edges and finer details compared to bicubic upsampling.](results/comparison.png)
 
 *Fig 1: Side-by-side comparison of bicubic interpolation and PnP-ADMM super-resolution (2×). The PnP-ADMM result shows visibly sharper edges and better recovery of fine-scale details.*
 
 ### Fig 2: DnCNN Training Loss Curve
 
-![Fig 2: Training loss (MSE) curve of the DnCNN denoiser over 10 epochs on the DIV2K dataset.](review-2/results/training_loss_curve.png)
+![Fig 2: Training loss (MSE) curve of the DnCNN denoiser over 10 epochs on the DIV2K dataset.](results/training_loss_curve.png)
 
 *Fig 2: DnCNN training loss (MSE) over 10 epochs. The loss decreases steadily, indicating effective convergence of the denoiser training.*
 
