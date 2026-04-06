@@ -1,3 +1,4 @@
+![Amrita](review-2/results/Amrita-vishwa-vidyapeetham-logo.svg.png)
 # PnP-ADMM Super-Resolution using DnCNN
 
 **MFC Project Final Review**  
