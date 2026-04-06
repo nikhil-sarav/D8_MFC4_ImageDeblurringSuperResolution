@@ -164,7 +164,13 @@ The primal residual $\|x^k - v^k\|$ decreases monotonically across ADMM iteratio
 
 ## Conclusion
 
-This project demonstrates the effectiveness of the Plug-and-Play ADMM framework for single-image super-resolution using a DnCNN denoiser as an implicit prior. The key findings are as follows. First, PnP-ADMM consistently outperforms bicubic interpolation by approximately 2–3 dB in PSNR on 2× super-resolution tasks. Second, the DnCNN, trained purely for Gaussian denoising, generalizes effectively as an image prior within the ADMM optimization loop, validating the core idea of the PnP framework. Third, convergence is stable, with the primal residual $\|x - v\|$ decreasing monotonically across iterations. Fourth, the Conjugate Gradient solver efficiently handles the data-fidelity subproblem without requiring explicit construction of the full system matrix. Finally, the penalty parameter $\rho = 0.005$ provides a good balance between data fidelity and regularization, reducing over-smoothing artifacts from the denoiser.
+This project demonstrates the effectiveness of the Plug-and-Play ADMM framework for single-image super-resolution using a DnCNN denoiser as an implicit prior. The key findings are:
+
+1. PnP-ADMM consistently outperforms bicubic interpolation by approximately 2–3 dB in PSNR on 2× super-resolution tasks.
+2. The DnCNN, trained purely for Gaussian denoising, generalizes effectively as an image prior within the ADMM optimization loop, validating the core idea of the PnP framework.
+3. Convergence is stable, with the primal residual $\|x - v\|$ decreasing monotonically across iterations.
+4. The Conjugate Gradient solver efficiently handles the data-fidelity subproblem without requiring explicit construction of the full system matrix.
+5. The penalty parameter $\rho = 0.005$ provides a good balance between data fidelity and regularization, reducing over-smoothing artifacts from the denoiser.
 
 ---
 
