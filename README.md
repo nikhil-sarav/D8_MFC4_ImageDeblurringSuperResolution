@@ -3,12 +3,9 @@
 
 **MFC Project Final Review**  
 **Group - D8**
-
-| Name | Roll Number |
-|---|---|
-| S Nikhil | CB.SC.U4AIE24351 |
-| Dhyan B | CB.SC.U4AIE24314 |
-
+**S Nikhil - CB.SC.U4AIE24351**
+**Dhyan B - CB.SC.U4AIE24314**
+**22MAT230 - Mathematics for Computing 4**
 ---
 
 ## Table of Contents
